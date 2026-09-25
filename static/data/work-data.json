@@ -1,0 +1,97 @@
+[
+    {
+        "id": "linknest",
+        "title": "LinkNest",
+        "details": {
+            "description": "A premium personal URL library and visual bookmark archive for organizing web content.",
+            "summary": "Visual URL Library"
+        },
+        "roles": [
+            "UI/UX Designer",
+            "Full-Stack Developer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://linknest.divinescode.com/"
+            }
+        ]
+    },
+    {
+        "id": "riyansh",
+        "title": "RIYANSH Health Care",
+        "details": {
+            "description": "An authentic Ayurvedic e-commerce platform for health supplements, immunity products, and wellness care.",
+            "summary": "Ayurvedic & Healthcare E-Commerce"
+        },
+        "roles": [
+            "Full-Stack Developer",
+            "E-Commerce Specialist"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://riyanshamrit.com/"
+            }
+        ]
+    },
+    {
+        "id": "pravin-realty",
+        "title": "Pravin Realty",
+        "details": {
+            "description": "A modern real estate platform for buying, selling, and renting premium residential and commercial spaces across West Pune.",
+            "summary": "Real Estate Platform"
+        },
+        "roles": [
+            "UI/UX Designer",
+            "Front-End Developer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://pravin-realty.divinescode.com/"
+            }
+        ]
+    },
+    {
+        "id": "gravitate",
+        "title": "Gravitate Foods",
+        "details": {
+            "description": "An online brand platform and e-commerce portal for pure ground spices and food manufacturing.",
+            "summary": "Brand & Spices E-Commerce"
+        },
+        "roles": [
+            "Brand Designer",
+            "Web Developer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://gravitatee.com/"
+            }
+        ]
+    },
+    {
+        "id": "tellstar",
+        "title": "TellStar Networks",
+        "details": {
+            "description": "Enterprise networking, IT infrastructure, and communications solutions platform for businesses.",
+            "summary": "Network & IT Solutions"
+        },
+        "roles": [
+            "Full-Stack Developer",
+            "Web Designer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://tellstar.in/"
+            }
+        ]
+    }
+]
