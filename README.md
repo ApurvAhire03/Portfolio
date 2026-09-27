@@ -1,5 +1,3 @@
-# <img src="banner.jpg" align="center" alt="Apurv Ahire Portfolio Banner"/>
-
 # Apurv Ahire — Personal Portfolio
 
 Source code for the personal portfolio of **Apurv Ahire**, Web Developer from Nasik, Maharashtra.
