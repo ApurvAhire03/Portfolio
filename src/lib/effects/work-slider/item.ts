@@ -25,7 +25,7 @@ export class SliderImageMesh extends ImageMesh {
                 value: new THREE.Vector2(0.0, 0.0)
             },
             uAlpha: { // Opacity
-                value: 0.7
+                value: 0.85
             }
         }
 

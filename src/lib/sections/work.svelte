@@ -471,19 +471,19 @@
 
 		&.hold
 			.list-item
-				height: 45vh !important
+				height: 42vh !important
+				width: 38vw !important
 
 		.list-item
 			display: inline-flex
 			justify-content: flex-end
 			overflow: hidden
-			height: 55vh
-			width: 23vw
+			height: 48vh
+			width: 42vw
 			box-sizing: border-box
 			position: relative
-			overflow: hidden
 			z-index: 3
-			margin-right: 6vw
+			margin-right: 8vw
 			transition: width 0.7s cubic-bezier(0.25, 1, 0.5, 1), height 0.7s cubic-bezier(0.25, 1, 0.5, 1), margin 0.8s cubic-bezier(0.25, 1, 0.5, 1)
 
 			*
@@ -491,16 +491,18 @@
 				-webkit-transition: opacity 0.3s ease
 
 			&.active
-				height: 60vh
-				width: 50vw
-				margin-right: 16vw
-				margin-left: 10vw
+				height: 56vh
+				width: 58vw
+				margin-right: 14vw
+				margin-left: 6vw
 
 				.img-wrapper
 					width: 100%
+					margin-right: 0
 
 			&.ambient
-				height: 45vh
+				height: 40vh
+				width: 36vw
 
 			.hidden
 				opacity: 0
@@ -510,24 +512,24 @@
 				height: 100%
 				z-index: 1
 				position: relative
-				width: 85%
-				margin-right: 15%
-				box-shadow: 3px 9px 18px rgba(0, 0, 0, 0.2)
+				width: 88%
+				margin-right: 12%
+				border-radius: 8px
+				box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45)
 				
 				img
-					height: 110%
-					width: 110%
+					height: 100%
+					width: 100%
 					object-fit: cover
+					object-position: top center
 					position: absolute
-					top: 50%
-					left: 50%
-					transform: translate(-50%, -50%)
-					-webkit-transform: translate(-50%, -50%)
-					opacity: 0.5
+					top: 0
+					left: 0
+					opacity: 0.65
 
 			.text-top-wrapper
 				position: absolute
-				top: 6vh
+				top: 4vh
 				right: 0
 				z-index: 2
 				word-wrap: break-word
@@ -546,29 +548,30 @@
 				flex-direction: column
 				justify-content: flex-end
 				position: absolute
-				bottom: 10vh
+				bottom: 4vh
 				right: 0
+				max-width: 55%
 				text-align: right
 				z-index: 2
 
 				.button
-					font-size: 1.3vw
+					font-size: 1.1vw
 					letter-spacing: 0.1vw
-					margin-top: 2vh
+					margin-top: 1.5vh
 					text-transform: uppercase
 
 				.item-title
 					font-family: consts.$font
 					font-weight: normal
-					font-size: 2.5vw
+					font-size: 2.2vw
 					z-index: 0
 					opacity: 1
-					letter-spacing: 0.1vw
+					letter-spacing: 0.05vw
 					line-height: 110%
-					word-spacing: 80vw
 					text-transform: lowercase
 					word-wrap: break-word
 					white-space: normal
+					text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8)
 
 
 				.inline-wrapper
@@ -581,33 +584,46 @@
 
 		@media only screen and (max-width: 1450px)
 			.list-item
-				width: 25vw
+				width: 48vw
+				height: 46vh
+
+				.text-wrapper
+					.item-title
+						font-size: 2.8vw
+
+					.button
+						font-size: 1.3vw
 
 		@media only screen and (max-width: 1110px)
 			.list-item
-				width: 40vw
+				width: 62vw
+				height: 44vh
+				margin-right: 8vw
 
 				.text-top-wrapper
 					.item-index
-						font-size: 2vh
+						font-size: 1.8vh
 
 				.text-wrapper
-					width: calc(55vw - 10vh)
+					max-width: 65%
 
 					.item-title
-						font-size: 5vw
+						font-size: 4vw
 
-					.item-link
-						font-size: 2vh
+					.button
+						font-size: 1.8vh
 
 		@media only screen and (max-width: 650px)
 			.list-item
-				width: 75vw
+				width: 84vw
+				height: 38vh
+				margin-right: 6vw
 
 				.text-wrapper
-					width: calc(70vw - 10vh)
+					max-width: 75%
+					bottom: 3vh
 
 					.item-title
-						font-size: 4.5vh
+						font-size: 3.2vh
 
 </style>

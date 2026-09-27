@@ -1,47 +1,65 @@
-# <img src="banner.jpg" align="center" alt="banner"/>
+# <img src="banner.jpg" align="center" alt="Apurv Ahire Portfolio Banner"/>
 
-Source code for my personal portfolio, musabhassan.com
+# Apurv Ahire — Personal Portfolio
 
-[![Visit Live Site](https://img.shields.io/badge/Visit%20Live%20Site-222224?style=for-the-badge)](https://musabhassan.com)
+Source code for the personal portfolio of **Apurv Ahire**, Web Developer from Nasik, Maharashtra.
 
-### Source Information
+[![GitHub](https://img.shields.io/badge/GitHub-ApurvAhire03-181717?style=for-the-badge&logo=github)](https://github.com/ApurvAhire03)
+[![Contact](https://img.shields.io/badge/Email-apuravahire2003%40gmail.com-EA4335?style=for-the-badge&logo=gmail)](mailto:apuravahire2003@gmail.com)
 
-This website is built with
+---
 
-- [SvelteKit (Frontend Framework)](https://kit.svelte.dev/)
-- [Slickscroll (Scroll Effects)](https://github.com/Musab-Hassan/slickscrolljs)
-- [Anime (Animations)](https://github.com/juliangarnier/anime)
-- [Three.js (3D Effects)](https://github.com/mrdoob/three.js/)
-- [Firebase (Hosting)](https://firebase.google.com/docs/hosting)
+### 🚀 Tech Stack
 
-This is the source for version 2+. Version 1.0, the one built with jQuery is in the [v1 branch](https://github.com/Musab-Hassan/musabhassan.com/tree/v1).
+This website is built with modern web technologies:
 
-### Developing
+- **[SvelteKit](https://kit.svelte.dev/)** — Full-stack web framework & UI components
+- **[Slickscroll](https://github.com/Musab-Hassan/slickscrolljs)** — Momentum scrolling & parallax effects
+- **[Anime.js](https://animejs.com/)** — Smooth UI animations and stroke path reveals
+- **[Three.js](https://threejs.org/)** — Interactive 3D visual experiences
+- **[Sass](https://sass-lang.com/)** — Modern styling and mixins
+- **[TypeScript](https://www.typescriptlang.org/)** — Type safety
 
-The site is just a regular SvelteKit project, with ssr disabled.
+---
 
-For development, start the vite development server:
+### 💻 Getting Started
 
+#### Prerequisites
+Make sure you have Node.js (v18+ recommended) installed.
+
+#### 1. Clone the repository
+```bash
+git clone https://github.com/ApurvAhire03/Portfolio.git
+cd Portfolio
+```
+
+#### 2. Install dependencies
+```bash
+npm install
+```
+
+#### 3. Start development server
 ```bash
 npm run dev
 ```
 
-*Note: Due to migration from Rollup, HMR breaks the site. You have to do a full reload if you modify any components or TS files.*
+The application will be available at `http://localhost:5173/`.
 
-For production, build the site:
-
+#### 4. Build for production
 ```bash
 npm run build
 ```
 
-### Contributing
+---
 
-You can fork this repo and modify it however I wont really be accepting pull requests due to the nature of the website being based on "taste" and a showcase of my work.
+### 👤 Author
 
-If you decide to use this site for your own commercial work, replace my personal logos with yours.
+**Apurv Ahire**
+- **GitHub:** [@ApurvAhire03](https://github.com/ApurvAhire03)
+- **Email:** [apuravahire2003@gmail.com](mailto:apuravahire2003@gmail.com)
 
-Please don't use my personal logos as yours.
+---
 
-### License
+### 📄 License
 
-Mozilla Public License 2.0 License.
+This project is licensed under the Mozilla Public License 2.0.
