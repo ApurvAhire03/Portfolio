@@ -144,23 +144,39 @@
 	flex-direction: row
 	justify-content: space-between
 	overflow: hidden
-	padding: 0 5vw
-	margin-top: 40vh
+	padding: 0 7vw
+	margin-top: 30vh
 	position: relative
 	padding-bottom: 5vh
 
+	@media only screen and (max-width: 950px)
+		flex-direction: column
+		margin-top: 14vh
+		padding: 0 6vw
+
 	.profile-image
-		width: 55%
+		width: 45%
 		overflow: hidden
-		margin-top: -40vh
+		margin-top: -20vh
 		position: relative
 
+		@media only screen and (max-width: 950px)
+			width: 100%
+			max-width: 420px
+			height: 44vh
+			margin: 4vh auto 0
+			display: block
+
 		img
-			height: 80%
-			width: 90%
-			border-radius: 0.5vh
+			height: 85%
+			width: 100%
+			border-radius: 12px
 			object-fit: cover
-			object-position: center 35%
+			object-position: center 25%
+			box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5)
+
+			@media only screen and (max-width: 950px)
+				height: 100%
 
 	.content-wrapper
 		box-sizing: border-box
@@ -176,97 +192,107 @@
 		z-index: 2
 
 		@media only screen and (max-width: 950px)
-			&
-				width: 80%
-
-				h1
-					font-size: 25vw !important
+			width: 100%
+			margin: 0
+			padding-right: 0
+			margin-top: 0
 
 		h1
-			font-size: 20vh
+			font-size: clamp(3.2rem, 15vw, 18vh)
 			font-weight: 400
+			line-height: 85%
 
 		.paragraph
-			margin-top: 10vh
-			margin-left: 13vw
+			margin-top: 6vh
+			margin-left: 10vw
 			position: relative
-			width: 60%
-			line-height: 1.5rem
+			width: 75%
+			line-height: 170%
 
-			@media only screen and (max-width: 750px)
-				&
-					width: 100%
-					margin-left: 5vw
+			@media only screen and (max-width: 950px)
+				width: 100%
+				margin-left: 0
+				margin-top: 3vh
 
 			&::before
 				content: ""
 				position: absolute
 				height: 1px
-				width: 10vw
-				right: 115%
+				width: 7vw
+				right: 110%
 				top: 15%
 				background-color: white
-				
+
+				@media only screen and (max-width: 950px)
+					display: none
 
 		.social-button-wrapper
-			font-size: 3vh
-			margin-left: 13vw
+			font-size: clamp(1.1rem, 2.5vh, 1.8rem)
+			margin-left: 10vw
 			margin-top: 4vh
-			display: inline-block
+			display: inline-flex
+			gap: 2vw
+
+			@media only screen and (max-width: 950px)
+				margin-left: 0
+				margin-top: 3vh
+				gap: 1.5rem
 
 			& :global(*:not(:last-child))
-				margin-right: 2vw
+				margin-right: 1.5vw
 
-			@media only screen and (max-width: 750px)
-				&
-					margin-left: 5vw
-
-
-	@media only screen and (max-width: 950px)
-		.profile-image
-			display: none
+				@media only screen and (max-width: 950px)
+					margin-right: 0
 
 .horizontal-flex
 	display: flex
 	flex-direction: row
 	justify-content: space-between
-	padding: 0 13vw
+	padding: 0 10vw
 	margin-top: 12vh
 	width: 100%
 	box-sizing: border-box
 
-	@media only screen and (max-width: 1080px)
+	@media only screen and (max-width: 950px)
 		flex-direction: column
-		padding: 0 8vw
+		padding: 0 6vw
+		margin-top: 8vh
 
 	.list
 		list-style-type: none
 		text-align: left
+		width: 100%
 
-		@media only screen and (max-width: 1080px)
-			margin-top: 10vh
+		@media only screen and (max-width: 950px)
+			margin-top: 2vh
 
 		li.list-title
-			letter-spacing: 0.6vh
-			font-size: 1.3vh
+			letter-spacing: 0.4vh
+			font-size: clamp(0.8rem, 1.3vh, 1rem)
 			font-weight: bold
+			color: rgba(255, 255, 255, 0.5)
 
 		li
 			font-family: consts.$font
 			text-transform: uppercase
-			font-size: 2vh
-			letter-spacing: 0.5vh
-			padding: 2vh 0
-			border-bottom: 1px solid #444
+			font-size: clamp(0.95rem, 1.8vh, 1.25rem)
+			letter-spacing: 0.3vh
+			padding: 2.2vh 0
+			border-bottom: 1px solid rgba(255, 255, 255, 0.15)
 			display: flex
 			flex-wrap: wrap
 			flex-direction: row
 			justify-content: space-between
 			align-items: center
-			column-gap: 10vw
-			row-gap: 3vh
+			column-gap: 5vw
+			row-gap: 1.5vh
+
+			.flex-item
+				display: flex
+				align-items: center
+				gap: 12px
 
 			img
-				height: 2.3vh
+				height: clamp(20px, 2.4vh, 28px)
 
 </style>

@@ -12,8 +12,6 @@ $font: "Questrial", sans-serif
 @mixin textStyles()
 
 	button.interactive
-		position: default
-		display: default
 		border: none
 		background-color: transparent
 		outline: none
@@ -21,48 +19,7 @@ $font: "Questrial", sans-serif
 		font-family: inherit
 		font-weight: inherit
 		font-size: inherit
-		
-	
-	@media only screen and (max-width: 750px)
-		.paragraph
-			font-size: 3.4vw !important
-
-		.title
-			font-size: 22vw
-
-		.subtitle
-			font-size: 4vw
-			letter-spacing: 0.7vw
-
-		.subheader
-			font-size: 3vw
-			letter-spacing: 0.7vw
-
-	@media only screen and (min-width: 750px)
-		.title
-			font-size: 19vh
-
-		.subtitle
-			font-size: 3vh
-			letter-spacing: 1vh
-
-		.subheader
-			font-size: 2vh
-			letter-spacing: 1vh
-
-	@media only screen and (min-width: 950px)
-		.paragraph
-			font-size: 1.8vh
-			line-height: 150%
-			width: 60%
-			letter-spacing: 0.05vw
-
-	@media only screen and (max-width: 950px)
-		.paragraph
-			font-size: 2vw
-			line-height: 180% !important
-			letter-spacing: 0
-			width: 100% !important
+		cursor: pointer
 
 	.title
 		color: white
@@ -70,7 +27,8 @@ $font: "Questrial", sans-serif
 		font-style: normal
 		font-family: $titleFont
 		text-transform: lowercase
-		line-height: 80%
+		line-height: 85%
+		font-size: clamp(3rem, 17vw, 19vh)
 
 	.subtitle, .subheader
 		color: white
@@ -79,9 +37,30 @@ $font: "Questrial", sans-serif
 		font-family: $titleFont
 		text-transform: lowercase
 
+	.subtitle
+		font-size: clamp(1.4rem, 4vw, 3vh)
+		letter-spacing: clamp(0.3rem, 1vw, 1vh)
+
+	.subheader
+		font-size: clamp(1.1rem, 3vw, 2vh)
+		letter-spacing: clamp(0.2rem, 1vw, 1vh)
+
 	.paragraph
 		font-family: $font
 		color: white
+		font-size: clamp(0.95rem, 1.6vw, 1.8vh)
+		line-height: 165%
+		letter-spacing: 0.02vw
+
+	@media only screen and (max-width: 950px)
+		.paragraph
+			font-size: clamp(0.95rem, 3.8vw, 1.15rem)
+			line-height: 170%
+			width: 100% !important
+
+	@media only screen and (min-width: 950px)
+		.paragraph
+			width: 60%
 
 	.button
 		font-family: $font

@@ -281,6 +281,9 @@
 #content-container.work-click-area
 	margin-top: 30vh
 
+	@media only screen and (max-width: 950px)
+		margin-top: 14vh
+
 #content-container.work-click-area .content-wrapper
 	display: flex
 	flex-direction: column
@@ -297,6 +300,12 @@
 		width: 100%
 		height: 100%
 		overflow-x: auto
+		-webkit-overflow-scrolling: touch
+		scroll-snap-type: x mandatory
+		scrollbar-width: none
+
+		&::-webkit-scrollbar
+			display: none
 	
 	*
 		-webkit-touch-callout: none
@@ -316,6 +325,10 @@
 		justify-content: space-between
 		box-sizing: border-box
 		padding: 0 14vw
+		z-index: 10
+
+		@media only screen and (max-width: 950px)
+			padding: 0 6vw
 
 		.wrapper
 			text-align: left
@@ -338,12 +351,12 @@
 						font-family: consts.$font
 						text-transform: uppercase
 						font-weight: normal
-						font-size: 1.9vh
+						font-size: clamp(0.9rem, 1.5vw, 1.9vh)
 
 					.index
 						font-family: consts.$font
 						position: relative
-						font-size: 2.1vh
+						font-size: clamp(1rem, 1.8vw, 2.1vh)
 
 					span.line
 						width: 300%
@@ -360,7 +373,7 @@
 				h1.title
 					position: relative
 					font-family: consts.$titleFont
-					font-size: 7vw
+					font-size: clamp(2.5rem, 7vw, 6rem)
 					text-transform: lowercase
 					font-weight: normal
 					word-wrap: break-word
@@ -373,7 +386,7 @@
 
 				.close-button
 					cursor: pointer
-					font-size: 3.3vw
+					font-size: clamp(2rem, 3.3vw, 3rem)
 
 			@media only screen and (max-width: 750px)
 				.mid-align
@@ -382,7 +395,7 @@
 					align-items: flex-start
 
 					h1.title
-						font-size: 16.5vw
+						font-size: clamp(2.2rem, 11vw, 3.8rem)
 
 					.close-button-wrapper
 						position: absolute
@@ -390,7 +403,7 @@
 						right: 0
 
 						.close-button
-							font-size: 5vh
+							font-size: 4vh
 
 			
 			.bottom-align
@@ -405,8 +418,9 @@
 					flex-basis: 0
 
 				p
-					font-size: 1.3vh
+					font-size: clamp(0.9rem, 1.2vw, 1.3vh)
 					width: 65%
+					line-height: 160%
 
 				.links
 					position: relative
@@ -416,7 +430,7 @@
 					gap: 2vh
 
 					.button
-						font-size: 1.1vw
+						font-size: clamp(0.95rem, 1.1vw, 1.4rem)
 						letter-spacing: 0.2vw
 						text-transform: uppercase
 						text-decoration: none
@@ -430,17 +444,21 @@
 					flex-direction: column
 					justify-content: flex-start
 					align-items: flex-start
-					gap: 1vh
+					gap: 1.5vh
 
 					p
-						font-size: 1.6vh !important
+						font-size: clamp(0.95rem, 3.8vw, 1.1rem) !important
+						width: 100%
 
 					.links
-						margin: 2vh 0
+						margin: 1.5vh 0
 						align-items: flex-start
+						flex-direction: row
+						flex-wrap: wrap
+						gap: 1.5rem
 						
 						.button
-							font-size: 2vh
+							font-size: 1.1rem
 							position: relative
 
 						.underline

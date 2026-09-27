@@ -103,6 +103,9 @@
 	pointer-events: none
 	will-change: width, height
 
+	@media (pointer: coarse), (max-width: 950px)
+		display: none !important
+
 	.dot
 		position: relative
 		width: 0

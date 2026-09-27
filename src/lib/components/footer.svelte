@@ -160,14 +160,15 @@
     box-sizing: border-box
 
     @media only screen and (max-width: 950px)
-        .flex-wrapper.decor
-            display: none !important
-
-    @media only screen and (max-width: 950px)
         flex-direction: column-reverse
+        padding: 8vh 6vw
+        margin-top: 14vh
 
         .flex-wrapper:not(:first-child)
-            margin-bottom: 15vh
+            margin-bottom: 6vh
+
+        .flex-wrapper.decor
+            display: none !important
 
     .inline-flex
         flex-grow: 1
@@ -177,38 +178,40 @@
 
 
     .logo-wrapper
-        margin-bottom: 5vh
+        margin-bottom: 4vh
 
         .logo
             display: inline-block
-            height: 6vh
+            height: clamp(36px, 5vh, 50px)
 
     .status-wrapper
         .button.large-text
             margin-top: 2vh
+            word-break: break-all
 
     .credits-wrapper
-        margin-top: 5vh
-        color: rgba(255,255,255,0.3)
+        margin-top: 4vh
+        color: rgba(255,255,255,0.4)
 
         p.year
             margin-bottom: 1vh
             font-family: consts.$font
-            font-size: 1.8vh
+            font-size: clamp(0.85rem, 1.6vh, 1rem)
             font-weight: normal
-            color: rgba(255,255,255,0.3)
+            color: rgba(255,255,255,0.4)
 
         .credits
-            font-size: 1.5vh
-            line-height: 125%
-            white-space: nowrap
-            color: rgba(255,255,255,0.3)
+            font-size: clamp(0.8rem, 1.4vh, 0.95rem)
+            line-height: 140%
+            white-space: normal
+            color: rgba(255,255,255,0.4)
 
             .button
-                color: rgba(255,255,255,0.3)
+                color: rgba(255,255,255,0.4)
 
     .large-text
-        font-size: 2.5vh
+        font-size: clamp(1.15rem, 2.4vh, 1.6rem)
+        line-height: 140%
 
         @media only screen and (max-width: 950px)
             br

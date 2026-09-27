@@ -100,10 +100,10 @@
 							</button>
 						</li>
 						<li class="mobile">
-							<a href="mailto:apuravahire2003@gmail.com" target="_blank" in:mobileTransitionSwitcher={{ delay: 350 }}>Contact</a>
+							<a href="mailto:apuravahire2003@gmail.com" target="_blank" onclick={() => mobileMenuActive = false} in:mobileTransitionSwitcher={{ delay: 350 }}>Contact</a>
 						</li>
 						<li use:introAnimation={{ delay: 1300 }}>
-							<a href="https://github.com/ApurvAhire03" target="_blank" in:mobileTransitionSwitcher={{ delay: 400 }}>Github</a>
+							<a href="https://github.com/ApurvAhire03" target="_blank" onclick={() => mobileMenuActive = false} in:mobileTransitionSwitcher={{ delay: 400 }}>Github</a>
 						</li>
 					{/key}
 				</ul>
@@ -206,15 +206,18 @@ button.interactive
 	@media only screen and (max-width: 950px)
 		.wrapper
 			position: fixed
-			top: -10.1vh
+			top: 0
 			right: 0
 			height: 100vh
+			height: 100dvh
 			width: 0vw
-			background-color: #131314
-			transition: 0.9s cubic-bezier(.58, .14, .06, .97) width
-			-webkit-transition: 0.9s cubic-bezier(.58, .14, .06, .97) width
-			-moz-transition: 0.9s cubic-bezier(.58, .14, .06, .97) width
+			background-color: rgba(19, 19, 20, 0.98)
+			backdrop-filter: blur(20px)
+			-webkit-backdrop-filter: blur(20px)
+			transition: 0.6s cubic-bezier(.58, .14, .06, .97) width
+			-webkit-transition: 0.6s cubic-bezier(.58, .14, .06, .97) width
 			overflow: hidden !important
+			z-index: 20
 
 			ul.nav-list
 				list-style-type: none
@@ -226,7 +229,6 @@ button.interactive
 				width: 100%
 				box-sizing: border-box
 				padding: 0 10vw
-				padding-top: 10vh
 				overflow: hidden !important
 
 			&.mobileMenuActive
@@ -235,15 +237,15 @@ button.interactive
 
 			li
 				font-family: consts.$font
-				font-weight: bolder
+				font-weight: 500
 				text-transform: lowercase
-				font-size: 9vw
+				font-size: clamp(2.2rem, 8vw, 3.5rem)
 				display: inline-flex
 				box-sizing: border-box
-				padding: 2vh 0
+				padding: 2.2vh 0
 
 				&:not(:last-child)
-					border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+					border-bottom: 1px solid rgba(255, 255, 255, 0.15)
 
 				button 
 					display: inline-block
@@ -266,7 +268,7 @@ button.interactive
 	.hb-button
 		cursor: pointer
 		position: relative
-		z-index: 21
+		z-index: 25
 
 		*
 			display: inline-block
@@ -279,18 +281,18 @@ button.interactive
 			display: flex
 			flex-direction: column
 			justify-content: center
-			row-gap: 5px
-			width: 3vh
-			height: 2.2vh
-			margin-right: 1.5vh
-			transition: row-gap 1s ease
-			-webkit-transition: row-gap 1s ease
-			-moz-transition: row-gap 1s ease
+			row-gap: 6px
+			width: 3.2vh
+			min-width: 24px
+			height: 2.4vh
+			min-height: 20px
+			margin-right: 0
+			transition: row-gap 0.5s ease
+			-webkit-transition: row-gap 0.5s ease
 
 			span
-				transition: 1s ease
-				-webkit-transition: 1s ease
-				-moz-transition: 1s ease
+				transition: 0.5s ease
+				-webkit-transition: 0.5s ease
 				display: block
 				position: relative
 				top: 0

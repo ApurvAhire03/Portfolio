@@ -101,12 +101,19 @@
 	left: 0
 	width: 100%
 	height: 100vh
+	height: 100dvh
 	position: relative
 	overflow: hidden auto
+	-webkit-overflow-scrolling: touch
+	scroll-behavior: smooth
 
 #nav-bar
 	position: fixed
 	top: 10vh
 	z-index: 100
+	width: 100%
+
+	@media only screen and (max-width: 950px)
+		top: 3.5vh
 
 </style>

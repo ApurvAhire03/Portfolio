@@ -115,7 +115,7 @@
 
 
 
-<div id="content-container" style="padding-top: 23vh" bind:this={homeContainerElement}>
+<div id="content-container" class="home-hero" bind:this={homeContainerElement}>
 	<div class="content-wrapper">
 		<div class="flex">
 			<div class="flex-wrapper first">
@@ -191,12 +191,18 @@
 @use "../consts" as consts
 @include consts.textStyles()
 
-#content-container
-	height: 100vh
+#content-container.home-hero
+	min-height: 100vh
+	min-height: 100dvh
 	width: 100vw
-	padding: 12vh 7vw
+	padding: 22vh 7vw 10vh
 	box-sizing: border-box
 	position: relative
+
+	@media only screen and (max-width: 950px)
+		padding: 14vh 6vw 6vh
+		min-height: 90vh
+		min-height: 90dvh
 
 	.content-wrapper
 		position: relative
@@ -228,10 +234,15 @@
 			h1
 				font-weight: 400
 				text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3)
+				font-size: clamp(3.2rem, 16vw, 19vh)
+				line-height: 85%
 
 			.title-mask
 				overflow: hidden
 				display: inline-flex
+
+			.word
+				font-size: inherit
 
 			.mask
 				overflow: hidden
@@ -242,17 +253,24 @@
 
 			.occupation
 				position: relative
-				margin-top: 8vh
+				margin-top: 6vh
+
+				@media only screen and (max-width: 950px)
+					margin-top: 3vh
+					width: 100%
 
 			.action-mask
-				margin-top: 10vh
+				margin-top: 8vh
 				margin-right: 7vw
 				display: inline-flex
 				overflow: hidden
 
+				@media only screen and (max-width: 950px)
+					margin-top: 4vh
+
 				.action
-					font-size: 2vh
-					letter-spacing: 0.5vh
+					font-size: clamp(0.85rem, 2vh, 1.1rem)
+					letter-spacing: 0.4vh
 					font-family: consts.$font
 					text-transform: uppercase
 					color: white
@@ -290,11 +308,11 @@
 
 		@media only screen and (max-width: 1250px)
 			&
-				opacity: 0.7
+				opacity: 0.65
 
 		@media only screen and (max-width: 750px)
 			&
-				opacity: 0.3
+				opacity: 0.35
 
 		img
 			height: 100%
@@ -327,10 +345,7 @@
 			&.second
 				justify-content: center !important
 				margin: 0
-
-	#content-container .flex .bottom
-		text-align: left
-		left: 5vw
+				width: 100%
 
 	.parallax-wrapper
 		width: 100% !important
@@ -338,7 +353,7 @@
 
 @media only screen and (max-width: 750px)
 	.occupation
-		width: 70%
+		width: 100% !important
 
 
 #signature
